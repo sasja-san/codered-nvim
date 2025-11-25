@@ -303,20 +303,34 @@ M.highlight_groups = {
   markdownCode = '@markup.raw',
   markdownCodeBlock = '@markup.raw.block',
 
-  ---- "lukas-reineke/indent-blankline.nvim"
-  
+  -- General rainbow color FGs.
+  RBRed    = { fg = c.rb_red },
+  RBOrange = { fg = c.rb_orange },
+  RBYellow = { fg = c.rb_yellow },
+  RBGreen  = { fg = c.rb_green },
+  RBCyan   = { fg = c.rb_cyan },
+  RBBlue   = { fg = c.rb_blue },
+  RBViolet = { fg = c.rb_violet },
 
+  ---- "lukas-reineke/indent-blankline.nvim"
 
 
   ---- "hiphish/rainbow-delimiters.nvim" :h rb-delimiters-colors
-  RainbowDelimiterRed    = { fg = c.rb_red },
-  RainbowDelimiterOrange = { fg = c.rb_orange },
-  RainbowDelimiterYellow = { fg = c.rb_yellow },
-  RainbowDelimiterGreen  = { fg = c.rb_green },
-  RainbowDelimiterCyan   = { fg = c.rb_cyan },
-  RainbowDelimiterBlue   = { fg = c.rb_blue },
-  RainbowDelimiterViolet = { fg = c.rb_violet },
+  -- RainbowDelimiterRed    = { fg = c.rb_red },
+  -- RainbowDelimiterOrange = { fg = c.rb_orange },
+  -- RainbowDelimiterYellow = { fg = c.rb_yellow },
+  -- RainbowDelimiterGreen  = { fg = c.rb_green },
+  -- RainbowDelimiterCyan   = { fg = c.rb_cyan },
+  -- RainbowDelimiterBlue   = { fg = c.rb_blue },
+  -- RainbowDelimiterViolet = { fg = c.rb_violet },
 
+  RainbowDelimiterRed    = "RBRed",
+  RainbowDelimiterOrange = "RBOrange",
+  RainbowDelimiterYellow = "RBYellow",
+  RainbowDelimiterGreen  = "RBGreen",
+  RainbowDelimiterCyan   = "RBCyan",
+  RainbowDelimiterBlue   = "RBBlue",
+  RainbowDelimiterViolet = "RBViolet",
 
   ---- "nvim-neo-tree/neo-tree.nvim" :h neo-tree-highlights
   NeoTreeFloatBorder  = "Normal",
