@@ -5,9 +5,10 @@ Adaptation of the VS Code Red theme to neovim.
 Source code for [melange](https://github.com/savq/melange-nvim)
 helped a lot in the making of this.
 
-How does it look? Head over to the [Wiki](https://github.com/sasja-san/codered-nvim/wiki) to a picture of it.
+![showcase_picture](https://private-user-images.githubusercontent.com/712688/518777432-89411054-0c5f-462b-bcf5-cb24d33bea15.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQwOTIwMzUsIm5iZiI6MTc2NDA5MTczNSwicGF0aCI6Ii83MTI2ODgvNTE4Nzc3NDMyLTg5NDExMDU0LTBjNWYtNDYyYi1iY2Y1LWNiMjRkMzNiZWExNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTI1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyNVQxNzI4NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMzM4OTk2NGU5ODhlNjcxYjI5OGEzNWQzM2VlNTBlY2E2YjM1ZjIxYTcyODdjYWQ5NGE4NGFkMzA0NjQzYjYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.bC9s3c7tHoh0R0BRyxTOXAwMGsZi051VCZfGYVHKSKw)
 
-![linked pic from wiki](https://private-user-images.githubusercontent.com/712688/518717074-301000d5-1940-437c-9d78-86d5ea7d8b29.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQwOTA2NjksIm5iZiI6MTc2NDA5MDM2OSwicGF0aCI6Ii83MTI2ODgvNTE4NzE3MDc0LTMwMTAwMGQ1LTE5NDAtNDM3Yy05ZDc4LTg2ZDVlYTdkOGIyOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTI1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyNVQxNzA2MDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMWJjZDhkMTgyM2M5ZjM3M2ExMzM2M2ZhYTg2MWYwYjk3NDE5ZmQ5ZmQyZDFkMmI0OThkZTU0YjkxNmYxZTVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.beCm_CwZejVd65Q73qLbt-QKvZzwvIQ1xuZvMLjGPuk)
+(if image is broken, go check in the wiki)
+
 
 
 ## Usage
@@ -36,7 +37,7 @@ require("mini.cursorword").setup()
 
 require("ibl").setup({
   indent = {
-    char = "▏", -- Use 1/8 instead of 1/4 (default)
+    char = "▏", -- Use 1/8 block instead of 1/4 (default)
   },
 }) 
 
@@ -52,8 +53,8 @@ require("rainbow-delimiters.setup").setup( {
 })
 ```
 
-  * If you want rainbow markings for indent-blankline, see its Github README for example.
-  * `mini.cursorword` can be switched for `RRethy/vim-illuminate` (if prefered).
+  * `indent-blankline` with rainbow colors? See its Github README for example.
+  * `mini.cursorword` can be switched for `RRethy/vim-illuminate`.
   * Highlight Groups declared for rainbow colors (should you need them) consist 
 of these names:
       ```lua
@@ -63,11 +64,13 @@ of these names:
       }
       ```
 
+
+
 ## Font Properties
 
-If you want to control which of the font variants to use,
-this example code should help you. All five variants
-must be declared in the table for this to work properly.
+If you want to control which of the font attributes in use, this example 
+code should help you. All five variants must be declared in the table
+for this to work properly.
 
 ```lua
 local font_vars = {
@@ -110,7 +113,7 @@ text = "CellForeground"
 - [x] HG for tree-sitter
 - [ ] HG for LSP (strikeover+undercurl for deprecated code)
 - [x] Support for lualine
-- [ ] Tweak lualine coloring
+- [ ] Tweak lualine coloring (visual is a bit too bright, among other things)
 - [ ] Other statuslines, such as airline
 - [ ] Change active tab coloring in bufferline
 - [ ] Number column is darker than Normal HG. Maybe follow VS Code better?

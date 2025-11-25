@@ -54,7 +54,7 @@ local colors = {
   inactive    = "#998585", -- inactive (such as tabline)
   word_hl_cur = "#5a403f", -- current word under cursor
   word_hl_oth = "#4f3f3f", -- words matching that under cursor
-  
+
 
 
   -- BASED ON PARENS, A FULL RAINBOW
@@ -64,7 +64,7 @@ local colors = {
   rb_orange  = "#ff7d17",
   rb_yellow  = "#ffd700", -- parenthesis 1
   rb_green   = "#a1c755",
-  rb_cyan    = "#47bab9", 
+  rb_cyan    = "#47bab9",
   rb_blue    = "#179fff", -- parenthesis 3
   rb_violet  = "#da70d6", -- parenthesis 2 (violet substitute)
 

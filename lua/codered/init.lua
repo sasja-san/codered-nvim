@@ -4,16 +4,13 @@ function M.setup()
 
   vim.cmd("syntax reset")
   vim.cmd.highlight("clear")
-  vim.cmd("highlight clear")
   vim.g.colors_name = "codered"
 
-  -- get highlights
+  -- get highlight group stuff
   local theme = require("codered.theme")
 
-  -- HACK: The user should set this themself.
-  vim.g.codered_fix_termcursor = true
-
-  if vim.g.codered_fix_termcursor then theme.guicursor_fix() end
+  local do_cursor_fix = vim.g.codered_fix_termcursor
+  if do_cursor_fix then theme.guicursor_fix() end
 
   theme.cursor_hl_setup()
 

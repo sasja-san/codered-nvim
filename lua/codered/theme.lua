@@ -1,16 +1,18 @@
-
 local M = {}
 
 local c = require('codered.palette')
 
 M.guicursor_fix = function()
-  vim.cmd("set termguicolors") 
+  vim.cmd("set termguicolors")
+
   -- the default cursor
-  local def = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,"
-            .. "t:block-blinkon500-blinkoff500-TermCursor"
+  -- local _def = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,"
+  --           .. "t:block-blinkon500-blinkoff500-TermCursor"
+
   local fix = "n-v-c:block-Cursor/lCursor"
              .. ",i:ver25-Cursor/lCursor"
              .. ",r-cr:hor50-WhiteCursor"
+
   local cmd = ":set guicursor="..fix
   vim.cmd( cmd )
 end
@@ -370,8 +372,5 @@ M.highlight_groups = {
   MiniCursorwordCurrent = "WordUnderCursorA",
 
 }
-
-
-
 
 return M
