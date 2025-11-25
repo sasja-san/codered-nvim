@@ -1,7 +1,8 @@
-# VS Code Red Colorscheme for NeoVim
+
+# codered
 
 Adaptation of the VS Code Red theme to neovim.
-Code from the theme [melange](https://github.com/savq/melange-nvim)
+Source code for [melange](https://github.com/savq/melange-nvim)
 helped a lot in the making of this.
 
 Usage:
@@ -13,16 +14,22 @@ vim.cmd("colorscheme codered")
 ```
 
 
+
 ## Recomended Plugins, and Their Configurations
+
+`mini.cursorword` can be switched for
+`RRethy/vim-illuminate` (if that's prefered).
 
 ```lua
 vim.pack.add({
   { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+  { src = "https://github.com/nvim-mini/mini.cursorword" }, 
   { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
 })
 
--- These are the colors VS Code uses
--- Omit `highlight` to get even more parenthesis colors.
+require("ibl").setup()
+require("mini.cursorword").setup()
+-- VS Code uses four colors. Omit `highlight` for seven.
 require("rainbow-delimiters.setup").setup( {
   highlight = {
     "RainbowDelimiterYellow",
@@ -31,13 +38,11 @@ require("rainbow-delimiters.setup").setup( {
     "RainbowDelimiterViolet",
   }
 })
-
-require("ibl").setup()
-
 ```
 
 
-# Font Properties
+
+## Font Properties
 
 If you want to control which of the font variants to use,
 this example code should help you. All five variants
@@ -55,7 +60,8 @@ vim.g.codered_enable_font_variants = font_vars
 ```
 
 
-# Cursor Issues
+
+## Cursor Issues
 
 To make this theme look the best either set your terminal to **not**
 invert (flip bg & fg colors) its cursor colors, or use a graphical frontend
